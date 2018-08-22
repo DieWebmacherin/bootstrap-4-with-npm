@@ -1,0 +1,7 @@
+/node_modules
+
+#Temp files
+._*
+._DS*
+.DS_Store
+*.*~
