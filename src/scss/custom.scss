@@ -52,7 +52,7 @@ body    {
 .card   {
     border: none;
     .card-img-top   {
-        margin-bottom: spacer("3");
+        @extend .pb-3;
     }
     .card-body  {
         padding: 0px;

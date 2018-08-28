@@ -9,6 +9,36 @@ $theme-colors: (
 /*----- Fonts -----*/
 $headings-font-weight: 400;
 /*Font families*/
+@font-face {
+  font-family: 'GT America Regular';
+  src: url('../fonts/GT-America-Standard-Regular.eot');
+  src: url('../fonts/GT-America-Standard-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/GT-America-Standard-Regular.woff2') format('woff2'),
+       url('../fonts/GT-America-Standard-Regular.woff') format('woff'),
+       url('../fonts/GT-America-Standard-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GT America Bold';
+  src: url('../fonts/GT-America-Standard-Bold.eot');
+  src: url('../fonts/GT-America-Standard-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/GT-America-Standard-Bold.woff2') format('woff2'),
+       url('../fonts/GT-America-Standard-Bold.woff') format('woff'),
+       url('../fonts/GT-America-Standard-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GT America Extended Bold';
+  src: url('../fonts/GT-America-Extended-Bold.eot');
+  src: url('../fonts/GT-America-Extended-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/GT-America-Extended-Bold.woff2') format('woff2'),
+       url('../fonts/GT-America-Extended-Bold.woff') format('woff'),
+       url('../fonts/GT-America-Extended-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 $font-families:  (
     "regular": "GT America Regular",
     "bold": "GT America Bold",
@@ -27,7 +57,6 @@ $font-family-base: font-family("regular"), sans-serif;
 $headings-font-family: font-family("bold"), sans-serif;
 $headings-font-family-extended: font-family("extended-bold"), sans-serif;
 /*Font sizes & line heights*/
-
 $font-sizes:  (
     "base": 18px,
     "medium": 27px,

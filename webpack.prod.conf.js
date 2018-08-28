@@ -11,14 +11,6 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.(sa|sc|c)ss$/,
-            use: [
-                MiniCssExtractPlugin.loader,
-                'css-loader',
-                'postcss-loader',
-                'sass-loader',
-            ],
-        }, {
             test: /\.(html)$/,
             include: path.join(__dirname, 'src/partials'),
             use: {
@@ -27,6 +19,23 @@ module.exports = {
                     interpolate: true
                 }
             }
+        }, {
+            test: /\.(sa|sc|c)ss$/,
+            use: [
+                MiniCssExtractPlugin.loader,
+                'css-loader',
+                'postcss-loader',
+                'sass-loader',
+            ],
+        }, {
+            test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'fonts/'
+                }
+            }]
         }]
     },
     plugins: [
