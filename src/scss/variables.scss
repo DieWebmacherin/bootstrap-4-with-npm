@@ -1,1 +1,59 @@
 $variable-test: green;
+/*Overwriting Bootstrap Variables that will then be used in existing Bootstrap SCSS*/
+$body-color: #000;
+/*Overwriting or adding to Bootstrap map, that will also be used in existing Bootstrap SCSS*/
+$theme-colors: (
+    "primary": #0000ff,
+    "black": #000
+);
+/*----- Fonts -----*/
+$headings-font-weight: 400;
+/*Font families*/
+$font-families:  (
+    "regular": "GT America Regular",
+    "bold": "GT America Bold",
+    "extended-bold": "GT America Extended Bold"
+);
+//Helper to get simpler map usage: 'map("key")' instead of 'map-get($maps, key)'
+@function font-family($key) {
+  @if map-has-key($font-families, $key) {
+    @return map-get($font-families, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $font-families.";
+  @return null;
+}
+$font-family-base: font-family("regular"), sans-serif;
+$headings-font-family: font-family("bold"), sans-serif;
+$headings-font-family-extended: font-family("extended-bold"), sans-serif;
+/*Font sizes & line heights*/
+
+$font-sizes:  (
+    "base": 18px,
+    "medium": 27px,
+    "large": 60px
+);
+//Helper to get simpler map usage: 'map("key")' instead of 'map-get($maps, key)'
+@function font-size($key) {
+  @if map-has-key($font-sizes, $key) {
+    @return map-get($font-sizes, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $font-sizes.";
+  @return null;
+}
+$line-heights:  (
+    "base": 27px,
+    "medium": 36px,
+    "large": 72px
+);
+//Helper to get simpler map usage: 'map("key")' instead of 'map-get($maps, key)'
+@function line-height($key) {
+  @if map-has-key($line-heights, $key) {
+    @return map-get($line-heights, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $line-heights.";
+  @return null;
+}
+/*----- Fonts END -----*/

@@ -1,8 +1,60 @@
+@import "./variables.scss"; /*Import custom variables first, because Bootstrap uses !default*/
 @import "../../node_modules/bootstrap/scss/bootstrap";
-@import "./variables.scss";
 .hello {
   font-weight: 700;
 }
 .btn-link   {
     color: $variable-test;
+}
+.headline-layout    {
+    color: green;
+    font-family: sans-serif;
+    font-size: 24px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+html,
+body    {
+    font-family: $font-family-base;
+    font-size: font-size("base");
+    line-height: line-height("base");
+}
+.headline1  {
+    color: theme-color("primary");
+    font-family: $headings-font-family-extended;
+    font-size: font-size("large");
+    line-height: line-height("large");
+}
+.headline2  {
+    color: theme-color("black");
+    font-family: $headings-font-family-extended;
+    font-size: font-size("medium");
+    line-height: line-height("medium");
+}
+.headline3  {
+    color: theme-color("primary");
+    font-family: $headings-font-family;
+    font-size: font-size("medium");
+    line-height: line-height("medium");
+}
+.headline4  {
+    color: theme-color("primary");
+    font-family: $headings-font-family-extended;
+    font-size: font-size("base");
+    line-height: line-height("base");
+}
+.headline5  {
+    color: theme-color("primary");
+    font-family: $headings-font-family;
+    font-size: font-size("base");
+    line-height: line-height("base");
+}
+.card   {
+    border: none;
+    .card-img-top   {
+        margin-bottom: spacer("3");
+    }
+    .card-body  {
+        padding: 0px;
+    }
 }
