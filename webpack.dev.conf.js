@@ -14,7 +14,7 @@ module.exports = {
     module: {
         rules: [{
             test: /\.(html)$/,
-            include: path.join(__dirname, 'partials'),
+            include: path.join(__dirname, 'src/partials'),
             use: {
                 loader: 'html-loader',
                 options: {

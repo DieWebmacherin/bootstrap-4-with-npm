@@ -2,12 +2,13 @@
 <html>
 
 <head>
-    <title>Bootstrap 4 Base Layout</title>
+    <%= require('./src/partials/meta.html') %>
 </head>
 
 <body>
-    <script src="main.js"></script>
-    <%= require('./partials/body.html') %>
+    <%= require('./src/partials/header.html') %>
+    <%= require('./src/partials/body.html') %>
+    <%= require('./src/partials/footer.html') %>
 </body>
 
 </html>
