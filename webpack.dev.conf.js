@@ -38,6 +38,18 @@ module.exports = {
                     outputPath: 'fonts/'
                 }
             }]
+        }, {
+            test: /\.(png|svg|jpg|gif)$/,
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]',
+                    outputPath: (file) => {
+                        let path = file.split("src/")[1];
+                        return path
+                    }
+                }
+            }]
         }]
     },
     plugins: [

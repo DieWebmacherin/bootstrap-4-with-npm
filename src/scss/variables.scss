@@ -1,11 +1,45 @@
-$variable-test: green;
 /*Overwriting Bootstrap Variables that will then be used in existing Bootstrap SCSS*/
 $body-color: #000;
 /*Overwriting or adding to Bootstrap map, that will also be used in existing Bootstrap SCSS*/
 $theme-colors: (
     "primary": #0000ff,
-    "black": #000
+    "black": #000,
+    "white": #fff
 );
+/*----- Grid -----*/
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1310px
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1280px
+);
+$spacer: 1rem;
+$spacers:  (
+    "zero": 0,
+    "quarter": ($spacer * .25),
+    "half": ($spacer * .5),
+    "base": $spacer,
+    "onehalf": ($spacer * 1.5),
+    "double": ($spacer * 2),
+    "triple": ($spacer * 3),
+    "sextuple": ($spacer * 6)
+);
+//Helper to get simpler map usage: 'map("key")' instead of 'map-get($maps, key)'
+@function spacing($key) {
+  @if map-has-key($spacers, $key) {
+    @return map-get($spacers, $key);
+  }
+  @warn "Unknown `#{$key}` in $spacers.";
+  @return null;
+}
+/*----- Grid END -----*/
 /*----- Fonts -----*/
 $headings-font-weight: 400;
 /*Font families*/
@@ -49,7 +83,6 @@ $font-families:  (
   @if map-has-key($font-families, $key) {
     @return map-get($font-families, $key);
   }
-
   @warn "Unknown `#{$key}` in $font-families.";
   @return null;
 }
@@ -60,28 +93,28 @@ $headings-font-family-extended: font-family("extended-bold"), sans-serif;
 $font-sizes:  (
     "base": 18px,
     "medium": 27px,
-    "large": 60px
+    "large": 36px,
+    "large-lg": 60px
 );
 //Helper to get simpler map usage: 'map("key")' instead of 'map-get($maps, key)'
 @function font-size($key) {
   @if map-has-key($font-sizes, $key) {
     @return map-get($font-sizes, $key);
   }
-
   @warn "Unknown `#{$key}` in $font-sizes.";
   @return null;
 }
 $line-heights:  (
     "base": 27px,
     "medium": 36px,
-    "large": 72px
+    "large": 45px,
+    "large-lg": 72px
 );
 //Helper to get simpler map usage: 'map("key")' instead of 'map-get($maps, key)'
 @function line-height($key) {
   @if map-has-key($line-heights, $key) {
     @return map-get($line-heights, $key);
   }
-
   @warn "Unknown `#{$key}` in $line-heights.";
   @return null;
 }

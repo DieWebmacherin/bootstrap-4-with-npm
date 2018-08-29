@@ -1,17 +1,15 @@
 @import "./variables.scss"; /*Import custom variables first, because Bootstrap uses !default*/
 @import "../../node_modules/bootstrap/scss/bootstrap";
-.hello {
-  font-weight: 700;
-}
-.btn-link   {
-    color: $variable-test;
-}
 .headline-layout    {
     color: green;
     font-family: sans-serif;
     font-size: 24px;
     text-decoration: underline;
     text-transform: uppercase;
+    margin-top: spacing("double");
+}
+.list-layout a    {
+    color: green;
 }
 html,
 body    {
@@ -49,12 +47,159 @@ body    {
     font-size: font-size("base");
     line-height: line-height("base");
 }
+.grayscale  {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+.circle {
+    border-radius: 100%;
+    overflow: hidden;
+}
+.container-fullwidth    {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
 .card   {
+    background: transparent;
     border: none;
+    border-radius: 0;
+    margin-bottom: spacing("triple");
+    [class*="card-img"] {
+        border-radius: 0;
+    }
     .card-img-top   {
-        @extend .pb-3;
+        margin-bottom: spacing("base");
+    }
+    .card-img-bottom   {
+        margin-top: spacing("base");
     }
     .card-body  {
         padding: 0px;
+        .card-title {
+            margin-bottom: 0;
+            &.headline3 {
+                margin-bottom: spacing("onehalf");
+            }
+        }
+    }
+}
+.carousel   {
+    .carousel-caption   {
+        position: relative;
+        text-align: left;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+    }
+}
+.accordion  {
+    .accordion-item   {
+        .accordion-header    {
+            background-color: theme-color("primary");
+            border-bottom: 1px solid theme-color("white");
+            button  {
+                background: transparent;
+                border: none;
+                color: theme-color("white");
+                display: block;
+                padding: spacing("base") 0;
+                width: 100%;
+                text-align: left;
+            }
+        }
+    }
+}
+header  {
+    padding: spacing("base") 0;
+    img {
+
+    }
+    a   {
+        color: theme-color("black");
+        margin-left: spacing("triple");
+    }
+}
+footer  {
+    color: theme-color("white");
+    a,
+    [class*="headline"] {
+        color: theme-color("white");
+    }
+    .info {
+        background-color: theme-color("primary");
+        padding-top: spacing("triple");
+        text-align: center;
+        .card   {
+            margin-bottom: spacing("triple");
+            .card-img-bottom {
+                margin-top: spacing("double");
+                padding: 0 spacing("onehalf");
+            }
+        }
+    }
+    .copyright  {
+        background-color: theme-color("black");
+        padding: spacing("onehalf") 0;
+        .headline5 {
+            display: inline-block;
+            margin-bottom: spacing("double");
+        }
+        a   {
+            margin-right: spacing("onehalf");
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+@include media-breakpoint-up(sm) {
+    footer  {
+        .info {
+            .card   {
+                .card-img-bottom {
+                    margin-top: 0;
+                    margin-bottom: spacing("double");
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-up(md) {
+    .card   {
+        margin-bottom: spacing("sextuple");
+    }
+    .carousel   {
+        .carousel-caption   {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 0 $grid-gutter-width/2;
+        }
+    }
+    footer  {
+        .info {
+            .card   {
+                .card-img-bottom {
+                    margin-bottom: spacing("triple");
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .headline1  {
+        font-size: font-size("large-lg");
+        line-height: line-height("large-lg");
+    }
+    .carousel   {
+        .carousel-caption   {
+            right: 0;
+            width: 50%;
+        }
     }
 }
