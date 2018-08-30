@@ -3,6 +3,11 @@ import _ from 'lodash';
 import 'slick-carousel';
 import './scss/custom.scss';
 
+import fontawesome from "@fortawesome/fontawesome-free";
+import { faCalendarAlt, faEnvelope } from "@fortawesome/fontawesome-free-regular";
+import faArrowUp from "@fortawesome/fontawesome-free-solid";
+fontawesome.library.add(faCalendarAlt, faEnvelope, faArrowUp);
+
 //----- Custom scripts -----//
 //Slick carousel
 $('.slick-carousel.fullwidth').slick({

@@ -3,7 +3,10 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: [
+        './src/index.js',
+        'font-awesome/scss/font-awesome.scss',
+    ],
     output: {
         filename: 'app.js',
         path: path.resolve(__dirname, 'dist')
@@ -13,44 +16,58 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.(html)$/,
-            include: path.join(__dirname, 'src/partials'),
-            use: {
-                loader: 'html-loader',
-                options: {
-                    interpolate: true
-                }
-            }
-        }, {
-            test: /\.(sa|sc|c)ss$/,
-            use: [
-                'style-loader',
-                'css-loader',
-                'postcss-loader',
-                'sass-loader',
-            ],
-        }, {
-            test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-            use: [{
-                loader: 'file-loader',
-                options: {
-                    name: '[name].[ext]',
-                    outputPath: 'fonts/'
-                }
-            }]
-        }, {
-            test: /\.(png|svg|jpg|gif)$/,
-            use: [{
-                loader: 'file-loader',
-                options: {
-                    name: '[path][name].[ext]',
-                    outputPath: (file) => {
-                        let path = file.split("src/")[1];
-                        return path
+                test: /\.(html)$/,
+                include: path.join(__dirname, 'src/partials'),
+                use: {
+                    loader: 'html-loader',
+                    options: {
+                        interpolate: true
                     }
                 }
-            }]
-        }]
+            }, {
+                test: /\.(sa|sc|c)ss$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'postcss-loader',
+                    'sass-loader',
+                ],
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts/'
+                    }
+                }]
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[path][name].[ext]',
+                        outputPath: (file) => {
+                            let path = file.split("src/")[1];
+                            return path
+                        }
+                    }
+                }]
+            },
+            {
+                test: /bootstrap\/dist\/js\/umd\//,
+                use: 'imports-loader?jQuery=jquery'
+            },
+            {
+                test: /font-awesome\.config\.js/,
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'font-awesome-loader' }
+                ]
+            },
+        ]
     },
     plugins: [
         new webpack.ProvidePlugin({
