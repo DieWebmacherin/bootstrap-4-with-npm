@@ -1,5 +1,6 @@
 @import "./variables.scss"; /*Import custom variables first, because Bootstrap uses !default*/
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/slick-carousel/slick/slick";
 .headline-layout    {
     color: green;
     font-family: sans-serif;
@@ -90,14 +91,42 @@ body    {
         }
     }
 }
-.carousel   {
-    .carousel-caption   {
+.slick-carousel {
+    .slick-prev,
+    .slick-next {
+        background: transparent;
+        border: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .slick-prev {
+        left: -30px;
+    }
+    .slick-next {
+        right: 30%;
+    }
+    .slick-item {
         position: relative;
-        text-align: left;
-        left: auto;
-        right: auto;
-        top: auto;
-        bottom: auto;
+        .slick-caption   {
+            position: relative;
+            text-align: left;
+            left: auto;
+            right: auto;
+            top: auto;
+            bottom: auto;
+        }
+    }
+    &.edge  {
+        .slick-list {
+            padding:0 20% 0 0;
+        }
+        .slick-item {
+            padding-right: 20%;
+        }
+    }
+    &.fullwidth {
+
     }
 }
 .accordion  {
@@ -176,12 +205,21 @@ footer  {
     .card   {
         margin-bottom: spacing("sextuple");
     }
-    .carousel   {
-        .carousel-caption   {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            padding: 0 $grid-gutter-width/2;
+    .slick-carousel   {
+        .slick-item {
+            .slick-caption   {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 0 $grid-gutter-width/2;
+            }
+        }
+        &.edge  {
+            .slick-item {
+                .slick-caption  {
+                    width: 80%;
+                }
+            }
         }
     }
     footer  {
@@ -199,10 +237,21 @@ footer  {
         font-size: font-size("large-lg");
         line-height: line-height("large-lg");
     }
-    .carousel   {
-        .carousel-caption   {
-            right: 0;
-            width: 50%;
+    .slick-carousel   {
+        .slick-item {
+            .slick-caption   {
+                right: 0;
+                width: 50%;
+            }
+        }
+        &.edge  {
+            .slick-item {
+                .slick-caption  {
+                    right: auto;
+                    left: 0;
+                    width: 50%;
+                }
+            }
         }
     }
 }
