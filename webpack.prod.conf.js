@@ -6,7 +6,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: [
         './src/index.js',
-        'font-awesome/scss/font-awesome.scss',
     ],
     output: {
         filename: 'main.js',
@@ -58,13 +57,6 @@ module.exports = {
             {
                 test: /bootstrap\/dist\/js\/umd\//,
                 use: 'imports-loader?jQuery=jquery'
-            },
-            {
-                test: /font-awesome\.config\.js/,
-                use: [
-                    { loader: 'style-loader' },
-                    { loader: 'font-awesome-loader' }
-                ]
             },
         ]
     },
