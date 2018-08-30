@@ -6,10 +6,11 @@ import './scss/custom.scss';
 import fontawesome from "@fortawesome/fontawesome-free";
 import { faCalendarAlt, faEnvelope } from "@fortawesome/fontawesome-free-regular";
 import faArrowUp from "@fortawesome/fontawesome-free-solid";
-fontawesome.library.add(faCalendarAlt, faEnvelope, faArrowUp);
+import { library } from '@fortawesome/fontawesome-svg-core';
+library.add(faCalendarAlt, faEnvelope, faArrowUp);
 
-//----- Custom scripts -----//
-//Slick carousel
+// ----- Custom scripts -----//
+// Slick carousel
 $('.slick-carousel.fullwidth').slick({
     infinite: true,
     slidesToShow: 1,
