@@ -253,6 +253,10 @@ footer  {
     a,
     [class*="headline"] {
         color: theme-color("white");
+        &:hover,
+        &:focus {
+            color: theme-color("white");
+        }
     }
     .info {
         background-color: theme-color("primary");
