@@ -21,6 +21,55 @@ body    {
 .container  {
     width: calc(100% - #{$grid-gutter-width});
 }
+.container-fullwidth    {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+.grayscale  {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+.circle {
+    border-radius: 100%;
+    overflow: hidden;
+}
+ul, li  {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.form-minimal   {
+    .form-control   {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid theme-color("white");
+        border-radius: 0;
+        color: theme-color("white");
+        display: block;
+        margin-bottom: spacing("base");
+        padding-left: 0;
+        width: 100%;
+        &::placeholder    {
+            color: theme-color("white");
+        }
+        &:focus {
+            background: transparent;
+            border-color: theme-color("white");
+        }
+    }
+    .btn.btn-link  {
+        color: theme-color("white");
+        padding-left: 0;
+        &:hover,
+        &:focus {
+            color: theme-color("white");
+        }
+    }
+}
 .headline1  {
     color: theme-color("primary");
     font-family: $headings-font-family-extended;
@@ -51,22 +100,6 @@ body    {
     font-size: font-size("base");
     line-height: line-height("base");
 }
-.grayscale  {
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-}
-.circle {
-    border-radius: 100%;
-    overflow: hidden;
-}
-.container-fullwidth    {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-}
 .card   {
     background: transparent;
     border: none;
@@ -96,6 +129,7 @@ body    {
     .slick-next {
         background: transparent;
         border: none;
+        cursor: pointer;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -148,12 +182,70 @@ body    {
 }
 header  {
     padding: spacing("base") 0;
+    .row    {
+        align-items: center;
+    }
     img {
 
     }
-    a   {
+    .link-nav a   {
         color: theme-color("black");
         margin-left: spacing("triple");
+    }
+    .main-menu-toggle   {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 30px;
+    }
+    .main-menu-modal    {
+        &.fade-right {
+            .modal-dialog {
+                transform: translate(100%, 0);
+                float: right;
+            }
+            &.show .modal-dialog    {
+                transform: translate(0, 0);
+            }
+        }
+        &.show {
+            padding-right: 0px !important;
+        }
+        .modal-dialog   {
+            max-width: none;
+            width: 100%;
+            margin: 0;
+            .modal-content  {
+                background-color: theme-color("primary");
+                border: none;
+                border-radius: 0;
+                color: theme-color("white");
+                a,
+                [class*="headline"] {
+                    color: theme-color("white");
+                }
+                .modal-header,
+                .modal-body {
+                    padding: spacing("base") $grid-gutter-width;
+                }
+                .modal-header   {
+                    border: none;
+                    .close  {
+                        color: theme-color("white");
+                        opacity: 1;
+                        text-shadow: none;
+                    }
+                }
+                .modal-body {
+                    ul   {
+                        margin-bottom: spacing("triple");
+                    }
+                    form    {
+                        margin-bottom: spacing("base");
+                    }
+                }
+            }
+        }
     }
 }
 footer  {
@@ -190,6 +282,13 @@ footer  {
     }
 }
 @include media-breakpoint-up(sm) {
+    header  {
+        .main-menu-modal    {
+            .modal-dialog   {
+                width: 50%;
+            }
+        }
+    }
     footer  {
         .info {
             .card   {
@@ -251,6 +350,13 @@ footer  {
                     left: 0;
                     width: 50%;
                 }
+            }
+        }
+    }
+    header  {
+        .main-menu-modal    {
+            .modal-dialog   {
+                width: 25%;
             }
         }
     }

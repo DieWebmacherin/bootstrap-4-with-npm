@@ -1,14 +1,79 @@
 <header>
     <div class="container">
+        <p class="headline-layout">Homepage header</p>
         <div class="row">
             <div class="col-sm-4">
                 <img src="../assets/logo.png" alt="Logo"/>
             </div>
-            <div class="col-sm-8 text-right">
+            <div class="col-sm-8 text-right link-nav">
                 <a href="#">Area 1</a>
                 <a href="#">Area 2</a>
                 <a href="#">Area 3</a>
                 <a href="#">Area 4</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <p class="headline-layout">Subpage header</p>
+        <div class="row">
+            <div class="col-9">
+                <img src="../assets/logo.png" alt="Logo"/>
+            </div>
+            <div class="col-3 text-right">
+                <button class="main-menu-toggle" type="button" data-toggle="modal" data-target="#mainMenu"><i class="fa fa-bars"></i></button>
+            </div>
+        </div>
+        <div id="mainMenu" class="main-menu-modal modal fade fade-right" tabindex="-1" role="dialog" aria-labelledby="mainMenu" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li><a class="headline3" href="#">Home</a></li>
+                            <li><a class="headline3" href="#">Page 1</a></li>
+                            <li><a class="headline3" href="#">Page 2</a></li>
+                            <li><a class="headline3" href="#">Page 3</a></li>
+                            <li><a class="headline3" href="#">Page 4</a></li>
+                            <li><a class="headline3" href="#">Page 5</a></li>
+                            <li><a class="headline3" href="#">Page 6</a></li>
+                            <li><a class="headline3" href="#">Page 7</a></li>
+                        </ul>
+                        <p class="headline5 mb-0">Location</p>
+                        <p>
+                            Organization</br>
+                            Street 1</br>
+                            0000 City</br>
+                            Country
+                        </p>
+                        <p class="headline5 mb-0">Contact</p>
+                        <p>
+                            T +00 (0)0000 00000 00</br>
+                            F +00 (0)0000 00000 00</br>
+                            Email</br>
+                            </br>
+                            <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</a></br>
+                            <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i> Twitter</a></br>
+                            <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a></br>
+                            <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i> Linkedin</a>
+                        </p>
+                        <p class="headline5 mb-0">Newsletter</p>
+                        <form class="form-minimal">
+                            <input class="form-control" type="text" placeholder="Name" />
+                            <input class="form-control" type="email" placeholder="Email" />
+                            <button class="btn btn-link" type="submit">Send</button>
+                        </form>
+                        <p class="headline5 mb-0">Links</p>
+                        <p>
+                            <a href="#" target="_blank">External link 1</a></br>
+                            <a href="#" target="_blank">External link 2</a></br>
+                            <a href="#" target="_blank">External link 3</a>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

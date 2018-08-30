@@ -4,10 +4,10 @@ import 'slick-carousel';
 import './scss/custom.scss';
 
 import fontawesome from "@fortawesome/fontawesome-free";
-import { faCalendarAlt, faEnvelope } from "@fortawesome/fontawesome-free-regular";
-import faArrowUp from "@fortawesome/fontawesome-free-solid";
+import faSolid from "@fortawesome/fontawesome-free-solid";
+import faBrands from "@fortawesome/fontawesome-free-brands";
 import { library } from '@fortawesome/fontawesome-svg-core';
-library.add(faCalendarAlt, faEnvelope, faArrowUp);
+library.add(faSolid, faBrands);
 
 // ----- Custom scripts -----//
 // Slick carousel
