@@ -6,7 +6,9 @@
         <li><a href="#containers-backgrounds">Containers & Backgrounds</a></li>
         <li><a href="#cards">Cards</a></li>
         <li><a href="#carousel">Carousel</a></li>
+        <li><a href="#header-images">Header Images</a></li>
         <li><a href="#accordion">Accordion</a></li>
+        <li><a href="#tabs">Tabs</a></li>
         <li><a href="#detail-page">Detail Page</a></li>
         <li><a href="#footer">Footer</a></li>
     </ul>
@@ -17,6 +19,7 @@
     <p class="headline3">Headline 3</p>
     <p class="headline4">Headline 4</p>
     <p class="headline5">Headline 5</p>
+    <p class="headline6">Headline 6</p>
     <p>Normal text. Or <strong>bold</strong> and <i>italic</i>.</p>
     <p class="headline5">Font Awesome icon font</p>
     <p>
@@ -27,9 +30,11 @@
 
     <p id="buttons-links" class="headline-layout">Buttons & Links</p>
     <button class="btn btn-primary" type="button">Button primary</button>
-    <button class="btn btn-primary" type="button"><i class="fa fa-map"></i></button>
-    <button class="btn btn-link" type="button">Button link</button>
+    <button class="btn btn-primary" type="button"><i class="fa fa-fw fa-map"></i></button>
+    <button class="btn btn-link" type="button">Button link</button></br>
+    </br>
     <a href="#" class="headline5">Link with arrow &rarr;</a>
+    <a href="#" class="headline6">Link with arrow in black &rarr;</a>
 
     <p id="containers-backgrounds" class="headline-layout">Containers & Backgrounds</p>
     <p class="bg-primary">
@@ -120,6 +125,7 @@
                 <div class="card-body">
                     <p class="card-title headline3">Card title</p>
                     <p class="card-text headline4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="headline6">Read more link &rarr;</a>
                 </div>
             </div>
         </div>
@@ -128,6 +134,7 @@
                 <div class="card-body">
                     <p class="card-title headline3">Card title</p>
                     <p class="card-text headline4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="headline6">Read more link &rarr;</a>
                 </div>
             </div>
         </div>
@@ -136,6 +143,7 @@
                 <div class="card-body">
                     <p class="card-title headline3">Card title</p>
                     <p class="card-text headline4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="headline6">Read more link &rarr;</a>
                 </div>
             </div>
         </div>
@@ -189,6 +197,87 @@
                 <p class="headline1">Third slide</p>
             </div>
             <img class="d-block w-100" src="../content/slider-image.jpg" alt="Second slide">
+        </div>
+    </div>
+
+    <p id="header-images" class="headline-layout">Header Images</p>
+    <article>
+        <header>
+            <div class="row header-image">
+                <div class="col-md-3"></div>
+                <div class="col-md-9">
+                    <img class="d-block w-100" src="../content/header-image.jpg" alt="Header image">
+                </div>
+            </div>
+            <div class="row page-title">
+                <div class="col-md-6">
+                    <p class="headline5">Base &rarr; Breadcrumb &rarr;</p>
+                    <h1 class="headline1">Page title &mdash; with some extra text</h1>
+                </div>
+                <div class="col-md-6"></div>
+            </div>
+        </header>
+    </article>
+    <article>
+        <header>
+            <div class="row header-image">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="img-circle" style="background-image: url('../content/header-image.jpg');">
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+            <div class="row page-title">
+                <div class="col-md-6">
+                    <h1 class="headline1">Page title &mdash; with some extra text</h1>
+                </div>
+                <div class="col-md-6"></div>
+            </div>
+        </header>
+    </article>
+
+    <p id="tabs" class="headline-layout">Tabs</p>
+    <div class="tabs">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="true">
+                    <button class="btn btn-primary" type="button"><i class="fa fa-fw fa-info"></i></button>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="registration-tab" data-toggle="tab" href="#registration" role="tab" aria-controls="registration" aria-selected="true">
+                    <button class="btn btn-primary" type="button"><i class="fa fa-fw fa-user-plus"></i></button>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="social-tab" data-toggle="tab" href="#social" role="tab" aria-controls="social" aria-selected="false">
+                    <button class="btn btn-primary" type="button"><i class="fa fa-fw fa-code-branch"></i></button>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="map-tab" data-toggle="tab" href="#map" role="tab" aria-controls="map" aria-selected="false">
+                    <button class="btn btn-primary" type="button"><i class="fa fa-fw fa-map-marker-alt"></i></button>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="calendar-tab" data-toggle="tab" href="#calendar" role="tab" aria-controls="calendar" aria-selected="false">
+                    <button class="btn btn-primary" type="button"><i class="fa fa-fw fa-calendar"></i></button>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pdf-tab" data-toggle="tab" href="#pdf" role="tab" aria-controls="pdf" aria-selected="false">
+                    <button class="btn btn-primary" type="button"><i class="fa fa-fw fa-file-pdf"></i></button>
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info-tab">Tab Info Content</div>
+            <div class="tab-pane fade" id="registration" role="tabpanel" aria-labelledby="registration-tab">Tab Registration Content</div>
+            <div class="tab-pane fade" id="social" role="tabpanel" aria-labelledby="social-tab">Tab Social Content</div>
+            <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-tab">Tab Map Content</div>
+            <div class="tab-pane fade" id="calendar" role="tabpanel" aria-labelledby="calendar-tab">Tab Calendar Content</div>
+            <div class="tab-pane fade" id="pdf" role="tabpanel" aria-labelledby="pdf-tab">Tab PDF Content</div>
         </div>
     </div>
 
@@ -256,11 +345,11 @@
                 </div>
             </div>
             <div class="row page-title">
-                <div class="col-md-5">
+                <div class="col-md-6">
                     <p class="headline5">Base &rarr; Breadcrumb &rarr;</p>
                     <h1 class="headline1">Page title &mdash; with some extra text</h1>
                 </div>
-                <div class="col-md-7"></div>
+                <div class="col-md-6"></div>
             </div>
         </header>
         <div class="row">
@@ -268,20 +357,18 @@
             <div class="col-md-9 col-lg-6">
                 <section>
                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                    raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                 </section>
                 <section>
-                    <h2 class="headline5">Subtitle</h2>
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <h2 class="headline5">Subtitle</h2> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                    sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                    occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                 </section>
                 <section>
-                    <h2 class="headline5">Subtitle</h2>
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    <h2 class="headline5">Subtitle</h2> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                    sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                    occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                 </section>
                 <aside>
 

@@ -63,6 +63,14 @@ body    {
     border-radius: 100%;
     overflow: hidden;
 }
+.img-circle   {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    border-radius: 50%;
+    width: 100%;
+    padding-top: 100%;
+}
 ul, li  {
     margin: 0;
     padding: 0;
@@ -85,6 +93,9 @@ ul, li  {
     .btn.btn-link  {
         padding-left: 0;
     }
+}
+.btn    {
+    line-height: 2rem;
 }
 .btn.btn-primary    {
     background: transparent;
@@ -121,6 +132,16 @@ ul, li  {
     font-family: $headings-font-family;
     font-size: font-size("base");
     line-height: line-height("base");
+}
+.headline6  {
+    color: theme-color("black");
+    font-family: $headings-font-family;
+    font-size: font-size("base");
+    line-height: line-height("base");
+}
+strong  {
+    font-family: $headings-font-family;
+    font-weight: normal;
 }
 .card   {
     background: transparent;
@@ -185,6 +206,22 @@ ul, li  {
 
     }
 }
+.tabs   {
+    .nav-tabs    {
+        border: none;
+        .nav-link   {
+            border: none;
+            &.active    {
+                .btn.btn-primary    {
+                    box-shadow: 0 0 0 0.2rem rgba($component-active-bg, 0.5);
+                }
+            }
+        }
+    }
+    .tab-content    {
+        padding: spacing("base") 0;
+    }
+}
 .accordion  {
     .accordion-item   {
         .accordion-header    {
@@ -199,6 +236,9 @@ ul, li  {
                 width: 100%;
                 text-align: left;
             }
+        }
+        .collapse   {
+            padding: spacing("base") 0;
         }
     }
 }
