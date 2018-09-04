@@ -293,6 +293,7 @@ header  {
             .modal-content  {
                 border: none;
                 border-radius: 0;
+                min-height: 100vh;
                 .modal-header,
                 .modal-body {
                     padding: spacing("base") $grid-gutter-width;
