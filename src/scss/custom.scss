@@ -63,13 +63,16 @@ body    {
     border-radius: 100%;
     overflow: hidden;
 }
+.img-square,
 .img-circle   {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
-    border-radius: 50%;
     width: 100%;
     padding-top: 100%;
+}
+.img-circle   {
+    border-radius: 50%;
 }
 ul, li  {
     margin: 0;
@@ -240,6 +243,11 @@ strong  {
         .collapse   {
             padding: spacing("base") 0;
         }
+    }
+}
+.gallery    {
+    [class*="img-"] {
+        margin-bottom: $grid-gutter-width;
     }
 }
 article {
