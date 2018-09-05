@@ -23,3 +23,9 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+##Todo
+Fix loading of background images. Webpack doesn't recognize background images directly on elements. It doesn't import them with file-loader & it doesn't change the link correctly when building.
+
+Workaround: Include the image with an <img> tag first, then use it as a background-image. For building change the background-image link temporarily. 
