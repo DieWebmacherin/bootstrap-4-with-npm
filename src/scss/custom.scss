@@ -113,7 +113,6 @@ ul, li  {
     line-height: line-height("large");
 }
 .headline2  {
-    color: theme-color("black");
     font-family: $headings-font-family-extended;
     font-size: font-size("medium");
     line-height: line-height("medium");
@@ -137,7 +136,6 @@ ul, li  {
     line-height: line-height("base");
 }
 .headline6  {
-    color: theme-color("black");
     font-family: $headings-font-family;
     font-size: font-size("base");
     line-height: line-height("base");
@@ -145,6 +143,18 @@ ul, li  {
 strong  {
     font-family: $headings-font-family;
     font-weight: normal;
+}
+.webfont-extra-light  {
+    font-family: $webfont-family;
+    font-weight: font-weight("extra-light");
+}
+.webfont-regular  {
+    font-family: $webfont-family;
+    font-weight: font-weight("regular");
+}
+.webfont-bold  {
+    font-family: $webfont-family;
+    font-weight: font-weight("bold");
 }
 .card   {
     background: transparent;

@@ -1,8 +1,8 @@
 /*Overwriting Bootstrap Variables that will then be used in existing Bootstrap SCSS*/
-$body-color: #000;
+$body-color: #333;
 /*Overwriting or adding to Bootstrap map, that will also be used in existing Bootstrap SCSS*/
 $theme-colors: (
-    "primary": #0000ff,
+    "primary": #c20012,
     "black": #000,
     "white": #fff
 );
@@ -76,7 +76,8 @@ $headings-font-weight: 400;
 $font-families:  (
     "regular": "GT America Regular",
     "bold": "GT America Bold",
-    "extended-bold": "GT America Extended Bold"
+    "extended-bold": "GT America Extended Bold",
+    "webfont": "Titillium Web"
 );
 //Helper to get simpler map usage: 'map("key")' instead of 'map-get($maps, key)'
 @function font-family($key) {
@@ -118,4 +119,21 @@ $line-heights:  (
   @warn "Unknown `#{$key}` in $line-heights.";
   @return null;
 }
+
+/*Including a WEBFONT*/
+$webfont-family: font-family("webfont"), sans-serif;
+$font-weights:  (
+    "extra-light": 200,
+    "regular": 400,
+    "bold": 700
+);
+//Helper to get simpler map usage: 'map("key")' instead of 'map-get($maps, key)'
+@function font-weight($key) {
+  @if map-has-key($font-weights, $key) {
+    @return map-get($font-weights, $key);
+  }
+  @warn "Unknown `#{$key}` in $font-weights.";
+  @return null;
+}
+/*Including a WEBFONT END*/
 /*----- Fonts END -----*/
