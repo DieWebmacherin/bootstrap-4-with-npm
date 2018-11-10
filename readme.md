@@ -1,6 +1,7 @@
 # Bootstrap 4 Base Layout
 
 The Bootstrap 4 Base Layout is set up with npm & webpack. It automatically compiles bootstrap & our custom SCSS files.
+It also includes some commonly used plugins (e.g. font-awesome, slick-slider).
 
 ## Build Setup
 
@@ -10,8 +11,8 @@ npm install
 
 # serve with hot reload at localhost:8080
 npm run dev
-# run with your own local domain & report (e.g. aha-layout-cardorder.local:5000)
-# add your local domain to etc/hosts (e.g. aha-layout-cardorder.local)
+# run with your own local domain & report (e.g. project-layout.local:5000)
+# add your local domain to etc/hosts (e.g. project-layout.local)
 # start with your desired port (e.g. 5000)
 npm run dev -- --open --port 5000
 
@@ -21,5 +22,3 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
